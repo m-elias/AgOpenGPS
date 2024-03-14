@@ -28,6 +28,28 @@ namespace AgOpenGPS
 
         private void ReceiveFromAgIO(byte[] data)
         {
+            if (data[3] == 0x99)
+            {
+                if (data[5] == 1)
+                {
+                    data[6] = Math.Min((byte)data[6], (byte)10);    // limit to 10 sec maximum
+                    data[6] = Math.Max((byte)data[6], (byte)1);     // limit to  1 sec minimum
+                    Console.WriteLine("AoG Timed FreeForm!" + data[6]);
+                    byte[] Message = new byte[data.Length - 7];
+                    Array.Copy(data, 7, Message, 0, data.Length - 7);
+                    FormTimedMessage form = new FormTimedMessage(data[6] * 1000, "Heads up!", System.Text.Encoding.UTF8.GetString(Message));
+                    form.Show();
+                }
+                else
+                {
+                    Console.WriteLine("AoG Yes FreeForm!");
+                    byte[] Message = new byte[data.Length - 7];
+                    Array.Copy(data, 7, Message, 0, data.Length - 7);
+                    FormYes form = new FormYes(System.Text.Encoding.UTF8.GetString(Message));
+                    form.Show();
+                }
+            }
+
             if (data.Length > 4 && data[0] == 0x80 && data[1] == 0x81)
             {
                 int Length = Math.Max((data[4]) + 5, 5);

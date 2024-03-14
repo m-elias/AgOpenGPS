@@ -52,16 +52,17 @@
             this.btnSerialOK.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSerialOK.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSerialOK.Image = global::AgOpenGPS.Properties.Resources.OK64;
-            this.btnSerialOK.Location = new System.Drawing.Point(646, 358);
+            this.btnSerialOK.Location = new System.Drawing.Point(575, 285);
             this.btnSerialOK.Name = "btnSerialOK";
-            this.btnSerialOK.Size = new System.Drawing.Size(105, 64);
+            this.btnSerialOK.Size = new System.Drawing.Size(176, 137);
             this.btnSerialOK.TabIndex = 96;
             this.btnSerialOK.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnSerialOK.UseVisualStyleBackColor = true;
+            this.btnSerialOK.Click += new System.EventHandler(this.btnSerialOK_Click);
             // 
             // FormYes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(758, 430);

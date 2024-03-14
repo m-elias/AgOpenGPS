@@ -10,5 +10,11 @@ namespace AgOpenGPS
 
             lblMessage2.Text = messageStr;
         }
+
+        private void btnSerialOK_Click(object sender, System.EventArgs e)
+        {
+            Dispose();
+            Close();
+        }
     }
 }
