@@ -741,6 +741,21 @@ namespace AgOpenGPS
             }
             #endregion
 
+            #region Corrected Position
+            double Clat;
+            double Clon;
+            pn.ConvertLocalToWGS84(pn.fix.northing, pn.fix.easting, out Clat, out Clon);
+            byte[] CorPos = new byte[22];
+            CorPos[0] = 0x80;
+            CorPos[1] = 0x81;
+            CorPos[2] = 0x7F;
+            CorPos[3] = 0x64;
+            CorPos[4] = 16;
+            Buffer.BlockCopy(BitConverter.GetBytes(Clon), 0, CorPos, 5, 8);
+            Buffer.BlockCopy(BitConverter.GetBytes(Clat), 0, CorPos, 13, 8);
+            SendPgnToLoop(CorPos);
+            #endregion
+
             if (fixHeading >= glm.twoPI) 
                 fixHeading-= glm.twoPI;
 
