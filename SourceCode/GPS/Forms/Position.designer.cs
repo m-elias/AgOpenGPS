@@ -150,7 +150,10 @@ namespace AgOpenGPS
                         #region Start
 
                         distanceCurrentStepFixDisplay = glm.Distance(prevDistFix, pn.fix);
-                        if ((fd.distanceUser += distanceCurrentStepFixDisplay) > 999) fd.distanceUser = 0;
+                        if (avgSpeed > Properties.Settings.Default.setAS_minSteerSpeed)
+                        {
+                            if ((fd.distanceUser += distanceCurrentStepFixDisplay) > 999) fd.distanceUser = 0;
+                        }
                         distanceCurrentStepFixDisplay *= 100;
 
                         prevDistFix = pn.fix;
