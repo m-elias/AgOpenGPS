@@ -705,7 +705,10 @@ namespace AgOpenGPS
                         distanceCurrentStepFix = glm.Distance(pn.fix, prevDistFix);
 
                         //userDistance can be reset
-                        if ((fd.distanceUser += distanceCurrentStepFix) > 999) fd.distanceUser = 0;
+                        if (avgSpeed > Properties.Settings.Default.setAS_minSteerSpeed)
+                        {
+                            if ((fd.distanceUser += distanceCurrentStepFix) > 999) fd.distanceUser = 0;
+                        }
 
                         distanceCurrentStepFixDisplay = distanceCurrentStepFix * 100;
                         prevDistFix = pn.fix;
