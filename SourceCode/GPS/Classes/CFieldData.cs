@@ -115,6 +115,7 @@ namespace AgOpenGPS
             workedAreaTotal = 0;
             workedAreaTotalUser = 0;
             userSquareMetersAlarm = 0;
+            accumAppVol = 0.0;
         }
 
         public void UpdateFieldBoundaryGUIAreas()

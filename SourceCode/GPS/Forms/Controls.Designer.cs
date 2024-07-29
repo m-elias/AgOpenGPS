@@ -875,6 +875,7 @@ namespace AgOpenGPS
         {
             fd.distanceUser = 0;
             fd.workedAreaTotalUser = 0;
+            fd.accumAppVol = 0.0;
         }          
         private void btnNavigationSettings_Click(object sender, EventArgs e)
         {
