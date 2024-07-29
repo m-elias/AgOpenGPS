@@ -17,6 +17,12 @@ namespace AgOpenGPS
         //accumulated user distance
         public double distanceUser;
 
+        //accumulated application volume
+        public double accumAppVol = 0.0;
+
+        //application rate
+        public double appRateAcre = 0.0;
+
         public double barPercent = 0;
 
         public double overlapPercent = 0;

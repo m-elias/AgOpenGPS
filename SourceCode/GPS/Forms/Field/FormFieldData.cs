@@ -39,6 +39,8 @@ namespace AgOpenGPS
                 lblWorkRate.Text = mf.fd.WorkRateAcres;
                 lblApplied.Text = mf.fd.WorkedAcres;
                 lblActualLessOverlap.Text = mf.fd.ActualAreaWorkedAcres;
+                lblAppAccum.Text = mf.fd.accumAppVol.ToString("N2");
+                lblAppRate.Text = mf.fd.appRateAcre.ToString("N2");
             }
 
             if (mf.bnd.bndList.Count > 0)

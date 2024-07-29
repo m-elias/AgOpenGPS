@@ -256,6 +256,33 @@ namespace AgOpenGPS
                             break;
                         }
 
+                    case 160:
+                        // uint8_t PGN_160[] = { 0x80, 0x81, 123, 160, 8, byte[0] - byte[7], 0xCC };
+                        {
+                            double appVol = BitConverter.ToDouble(data, 5); // get 1/10 sec volume from module
+                                                                            // calibrated to whatever units you want in the module with machine PGN user byte[0 & 1]
+                                                                            // (num of pulses) / (byte[0] * 100 + byte[1])
+                            if (appVol > 0.0)
+                            {
+                                fd.accumAppVol += appVol * 0.097264;  // don't understand why /10 is needed here (0.097264 is used to "calibrate" the accum total, don't know why)
+
+                                double workRateAcresHr = (tool.width * avgSpeed * 0.2471);    // acres/hr (meters * km/hr * 0.2471)
+                                double workRateAcresSec = workRateAcresHr / 60.0 / 60.0;      // acres/sec
+                                double appRateAcresHr = appVol * 10.0 / workRateAcresSec;     // rate per acre
+                                if (double.IsNaN(fd.appRateAcre)) fd.appRateAcre = 0.0;       // just to catch possible NaN, likely not needed anymore
+                                fd.appRateAcre = fd.appRateAcre * 0.9 + appRateAcresHr * 0.1; // vol per 1 acre, averaged (1/10 sec *10 to get vol/sec, divide by acres/s)
+
+                                Console.WriteLine(workRateAcresHr.ToString("N1") + " " + workRateAcresSec.ToString("N4") + " " +
+                                    appVol.ToString("N6") + " " + fd.appRateAcre.ToString("N3") + " " + fd.accumAppVol.ToString("N6"));
+                            }
+                            else
+                            {
+                                fd.appRateAcre = 0;
+                            }
+                            btnSection1Man.Text = fd.appRateAcre.ToString("N1");
+                            break;
+                        }
+
                     #region Remote Switches
                     case 234://MTZ8302 Feb 2020
                         {

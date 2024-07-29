@@ -50,6 +50,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblActualRemain = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.lblAppAccum = new System.Windows.Forms.Label();
+            this.lblAppRate = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -66,7 +70,7 @@
             this.lblTimeRemaining.Location = new System.Drawing.Point(87, 153);
             this.lblTimeRemaining.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTimeRemaining.Name = "lblTimeRemaining";
-            this.lblTimeRemaining.Size = new System.Drawing.Size(18, 23);
+            this.lblTimeRemaining.Size = new System.Drawing.Size(23, 29);
             this.lblTimeRemaining.TabIndex = 479;
             this.lblTimeRemaining.Text = "-";
             // 
@@ -78,7 +82,7 @@
             this.label2.Location = new System.Drawing.Point(12, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 23);
+            this.label2.Size = new System.Drawing.Size(100, 29);
             this.label2.TabIndex = 478;
             this.label2.Text = "Remain:";
             // 
@@ -90,7 +94,7 @@
             this.lblAreaRemain.Location = new System.Drawing.Point(87, 95);
             this.lblAreaRemain.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblAreaRemain.Name = "lblAreaRemain";
-            this.lblAreaRemain.Size = new System.Drawing.Size(18, 23);
+            this.lblAreaRemain.Size = new System.Drawing.Size(23, 29);
             this.lblAreaRemain.TabIndex = 480;
             this.lblAreaRemain.Text = "-";
             // 
@@ -102,7 +106,7 @@
             this.lblWorkRate.Location = new System.Drawing.Point(58, 325);
             this.lblWorkRate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblWorkRate.Name = "lblWorkRate";
-            this.lblWorkRate.Size = new System.Drawing.Size(18, 23);
+            this.lblWorkRate.Size = new System.Drawing.Size(23, 29);
             this.lblWorkRate.TabIndex = 482;
             this.lblWorkRate.Text = "-";
             // 
@@ -114,7 +118,7 @@
             this.label3.Location = new System.Drawing.Point(10, 325);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 23);
+            this.label3.Size = new System.Drawing.Size(70, 29);
             this.label3.TabIndex = 481;
             this.label3.Text = "Rate:";
             // 
@@ -126,7 +130,7 @@
             this.lblTotalArea.Location = new System.Drawing.Point(76, 0);
             this.lblTotalArea.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTotalArea.Name = "lblTotalArea";
-            this.lblTotalArea.Size = new System.Drawing.Size(18, 23);
+            this.lblTotalArea.Size = new System.Drawing.Size(23, 29);
             this.lblTotalArea.TabIndex = 484;
             this.lblTotalArea.Text = "-";
             // 
@@ -138,7 +142,7 @@
             this.label4.Location = new System.Drawing.Point(23, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 23);
+            this.label4.Size = new System.Drawing.Size(74, 29);
             this.label4.TabIndex = 483;
             this.label4.Text = "Total:";
             // 
@@ -150,7 +154,7 @@
             this.lblApplied.Location = new System.Drawing.Point(87, 66);
             this.lblApplied.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblApplied.Name = "lblApplied";
-            this.lblApplied.Size = new System.Drawing.Size(18, 23);
+            this.lblApplied.Size = new System.Drawing.Size(23, 29);
             this.lblApplied.TabIndex = 486;
             this.lblApplied.Text = "-";
             // 
@@ -162,7 +166,7 @@
             this.label8.Location = new System.Drawing.Point(13, 66);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 23);
+            this.label8.Size = new System.Drawing.Size(97, 29);
             this.label8.TabIndex = 485;
             this.label8.Text = "Applied:";
             // 
@@ -174,7 +178,7 @@
             this.lblRemainPercent.Location = new System.Drawing.Point(87, 123);
             this.lblRemainPercent.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblRemainPercent.Name = "lblRemainPercent";
-            this.lblRemainPercent.Size = new System.Drawing.Size(18, 23);
+            this.lblRemainPercent.Size = new System.Drawing.Size(23, 29);
             this.lblRemainPercent.TabIndex = 487;
             this.lblRemainPercent.Text = "-";
             this.lblRemainPercent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -187,7 +191,7 @@
             this.label1.Location = new System.Drawing.Point(7, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 19);
+            this.label1.Size = new System.Drawing.Size(197, 24);
             this.label1.TabIndex = 488;
             this.label1.Text = "_________________";
             // 
@@ -199,7 +203,7 @@
             this.lblActualLessOverlap.Location = new System.Drawing.Point(85, 229);
             this.lblActualLessOverlap.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblActualLessOverlap.Name = "lblActualLessOverlap";
-            this.lblActualLessOverlap.Size = new System.Drawing.Size(18, 23);
+            this.lblActualLessOverlap.Size = new System.Drawing.Size(23, 29);
             this.lblActualLessOverlap.TabIndex = 490;
             this.lblActualLessOverlap.Text = "-";
             // 
@@ -211,7 +215,7 @@
             this.label6.Location = new System.Drawing.Point(9, 229);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 23);
+            this.label6.Size = new System.Drawing.Size(97, 29);
             this.label6.TabIndex = 489;
             this.label6.Text = "Applied:";
             // 
@@ -223,7 +227,7 @@
             this.label7.Location = new System.Drawing.Point(7, 203);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(162, 19);
+            this.label7.Size = new System.Drawing.Size(197, 24);
             this.label7.TabIndex = 491;
             this.label7.Text = "_________________";
             // 
@@ -235,7 +239,7 @@
             this.lblOverlapPercent.Location = new System.Drawing.Point(86, 287);
             this.lblOverlapPercent.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblOverlapPercent.Name = "lblOverlapPercent";
-            this.lblOverlapPercent.Size = new System.Drawing.Size(18, 23);
+            this.lblOverlapPercent.Size = new System.Drawing.Size(23, 29);
             this.lblOverlapPercent.TabIndex = 493;
             this.lblOverlapPercent.Text = "-";
             // 
@@ -247,7 +251,7 @@
             this.label9.Location = new System.Drawing.Point(9, 287);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 23);
+            this.label9.Size = new System.Drawing.Size(103, 29);
             this.label9.TabIndex = 492;
             this.label9.Text = "Overlap:";
             // 
@@ -259,7 +263,7 @@
             this.label10.Location = new System.Drawing.Point(51, 193);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 23);
+            this.label10.Size = new System.Drawing.Size(77, 29);
             this.label10.TabIndex = 494;
             this.label10.Text = "Actual";
             // 
@@ -271,7 +275,7 @@
             this.label5.Location = new System.Drawing.Point(45, 30);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 23);
+            this.label5.Size = new System.Drawing.Size(95, 29);
             this.label5.TabIndex = 495;
             this.label5.Text = "Worked";
             // 
@@ -283,7 +287,7 @@
             this.lblActualRemain.Location = new System.Drawing.Point(86, 258);
             this.lblActualRemain.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblActualRemain.Name = "lblActualRemain";
-            this.lblActualRemain.Size = new System.Drawing.Size(18, 23);
+            this.lblActualRemain.Size = new System.Drawing.Size(23, 29);
             this.lblActualRemain.TabIndex = 497;
             this.lblActualRemain.Text = "-";
             // 
@@ -295,16 +299,68 @@
             this.label12.Location = new System.Drawing.Point(10, 258);
             this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 23);
+            this.label12.Size = new System.Drawing.Size(100, 29);
             this.label12.TabIndex = 496;
             this.label12.Text = "Remain:";
+            // 
+            // lblAppAccum
+            // 
+            this.lblAppAccum.AutoSize = true;
+            this.lblAppAccum.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppAccum.ForeColor = System.Drawing.Color.White;
+            this.lblAppAccum.Location = new System.Drawing.Point(87, 373);
+            this.lblAppAccum.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblAppAccum.Name = "lblAppAccum";
+            this.lblAppAccum.Size = new System.Drawing.Size(23, 29);
+            this.lblAppAccum.TabIndex = 505;
+            this.lblAppAccum.Text = "-";
+            // 
+            // lblAppRate
+            // 
+            this.lblAppRate.AutoSize = true;
+            this.lblAppRate.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppRate.ForeColor = System.Drawing.Color.White;
+            this.lblAppRate.Location = new System.Drawing.Point(87, 402);
+            this.lblAppRate.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblAppRate.Name = "lblAppRate";
+            this.lblAppRate.Size = new System.Drawing.Size(23, 29);
+            this.lblAppRate.TabIndex = 504;
+            this.lblAppRate.Text = "-";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(9, 402);
+            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(70, 29);
+            this.label13.TabIndex = 503;
+            this.label13.Text = "Rate:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(9, 373);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 29);
+            this.label11.TabIndex = 502;
+            this.label11.Text = "Accum:";
             // 
             // FormFieldData
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(176, 356);
+            this.ClientSize = new System.Drawing.Size(176, 442);
+            this.Controls.Add(this.lblAppAccum);
+            this.Controls.Add(this.lblAppRate);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.lblWorkRate);
             this.Controls.Add(this.lblActualRemain);
             this.Controls.Add(this.label12);
@@ -362,5 +418,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblActualRemain;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblAppAccum;
+        private System.Windows.Forms.Label lblAppRate;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label11;
     }
 }
